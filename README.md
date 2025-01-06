@@ -84,9 +84,4 @@ For any queries or suggestions, feel free to reach out:
 Thank you for using the Online E-Learning Management System! 🚀  
 ```
 
-### Notes:
-1. Replace placeholders like `your-username` and `your-email@example.com` with your actual details.  
-2. Ensure the `database.sql` file is included in your repository for easier setup.  
-3. Add screenshots or GIFs of your project in action for a more engaging `README.md`.  
 
-Would you like to add specific sections like "Known Issues" or "Future Enhancements"?
