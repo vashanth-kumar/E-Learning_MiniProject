@@ -81,7 +81,6 @@ For any queries or suggestions, feel free to reach out:
 - **Email**: vashanthakumarks2004@gmail.com
 ---  
 
-Thank you for using the Online E-Learning Management System! 🚀  
-```
+Thank you for using the Online E-Learning Management System! 🚀 
 
 
