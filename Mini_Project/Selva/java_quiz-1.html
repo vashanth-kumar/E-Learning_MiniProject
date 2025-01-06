@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        form {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        .question label {
+            font-weight: bold;
+        }
+        .question input[type="radio"] {
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        #result {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #certificateButton {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Java Quiz</h1>
+    </header>
+    <form id="quizForm" onsubmit="submitQuiz(event)">
+        <!-- Question 1 -->
+        <div class="question">
+            <label>1. What is the size of an int data type in Java?</label><br>
+            <input type="radio" name="q1" value="a"> 2 bytes<br>
+            <input type="radio" name="q1" value="b"> 4 bytes<br>
+            <input type="radio" name="q1" value="c"> 8 bytes<br>
+        </div>
+        <!-- Question 2 -->
+        <div class="question">
+            <label>2. Which of the following is used to declare a constant in Java?</label><br>
+            <input type="radio" name="q2" value="a"> final<br>
+            <input type="radio" name="q2" value="b"> constant<br>
+            <input type="radio" name="q2" value="c"> static<br>
+        </div>
+        <!-- Question 3 -->
+        <div class="question">
+            <label>3. Which of the following is a valid variable name in Java?</label><br>
+            <input type="radio" name="q3" value="a"> int#1<br>
+            <input type="radio" name="q3" value="b"> _variable<br>
+            <input type="radio" name="q3" value="c"> 1variable<br>
+        </div>
+        <!-- Question 4 -->
+        <div class="question">
+            <label>4. What is the default return type of a method in Java?</label><br>
+            <input type="radio" name="q4" value="a"> int<br>
+            <input type="radio" name="q4" value="b"> void<br>
+            <input type="radio" name="q4" value="c"> String<br>
+        </div>
+        <!-- Question 5 -->
+        <div class="question">
+            <label>5. Which of the following is the correct syntax for importing a package?</label><br>
+            <input type="radio" name="q5" value="a"> import package.name;<br>
+            <input type="radio" name="q5" value="b"> #import package.name;<br>
+            <input type="radio" name="q5" value="c"> include package.name;<br>
+        </div>
+        <!-- Question 6 -->
+        <div class="question">
+            <label>6. Which operator is used to access an instance variable in Java?</label><br>
+            <input type="radio" name="q6" value="a"> .<br>
+            <input type="radio" name="q6" value="b"> -><br>
+            <input type="radio" name="q6" value="c"> &<br>
+        </div>
+        <!-- Question 7 -->
+        <div class="question">
+            <label>7. Which loop is guaranteed to execute at least once in Java?</label><br>
+            <input type="radio" name="q7" value="a"> for<br>
+            <input type="radio" name="q7" value="b"> while<br>
+            <input type="radio" name="q7" value="c"> do-while<br>
+        </div>
+        <!-- Question 8 -->
+        <div class="question">
+            <label>8. What is the output of System.out.println(5 + 3 * 2);?</label><br>
+            <input type="radio" name="q8" value="a"> 16<br>
+            <input type="radio" name="q8" value="b"> 11<br>
+            <input type="radio" name="q8" value="c"> 21<br>
+        </div>
+        <!-- Question 9 -->
+        <div class="question">
+            <label>9. What does the 'return 0;' statement signify in a Java program?</label><br>
+            <input type="radio" name="q9" value="a"> End of program<br>
+            <input type="radio" name="q9" value="b"> Successful execution<br>
+            <input type="radio" name="q9" value="c"> Both a and b<br>
+        </div>
+        <!-- Question 10 -->
+        <div class="question">
+            <label>10. Which of the following is used for equality comparison in Java?</label><br>
+            <input type="radio" name="q10" value="a"> ==<br>
+            <input type="radio" name="q10" value="b"> =<br>
+            <input type="radio" name="q10" value="c"> ===<br>
+        </div>
+        <!-- Question 11 -->
+        <div class="question">
+            <label>11. Which of the following is the correct way to declare a method in Java?</label><br>
+            <input type="radio" name="q11" value="a"> public methodName();<br>
+            <input type="radio" name="q11" value="b"> public void methodName();<br>
+            <input type="radio" name="q11" value="c"> public methodName;<br>
+        </div>
+        <!-- Question 12 -->
+        <div class="question">
+            <label>12. What is the value of an uninitialized instance variable?</label><br>
+            <input type="radio" name="q12" value="a"> 0<br>
+            <input type="radio" name="q12" value="b"> null<br>
+            <input type="radio" name="q12" value="c"> Garbage value<br>
+        </div>
+        <!-- Question 13 -->
+        <div class="question">
+            <label>13. What does the 'this' keyword refer to in Java?</label><br>
+            <input type="radio" name="q13" value="a"> The current object<br>
+            <input type="radio" name="q13" value="b"> The parent class<br>
+            <input type="radio" name="q13" value="c"> The method<br>
+        </div>
+        <!-- Question 14 -->
+        <div class="question">
+            <label>14. Which of the following is used to create an instance of a class in Java?</label><br>
+            <input type="radio" name="q14" value="a"> new ClassName();<br>
+            <input type="radio" name="q14" value="b"> ClassName();<br>
+            <input type="radio" name="q14" value="c"> ClassName new();<br>
+        </div>
+        <!-- Question 15 -->
+        <div class="question">
+            <label>15. What does System.out.println() do in Java?</label><br>
+            <input type="radio" name="q15" value="a"> Outputs text to the console<br>
+            <input type="radio" name="q15" value="b"> Reads input from the console<br>
+            <input type="radio" name="q15" value="c"> Terminates the program<br>
+        </div>
+        <!-- Question 16 -->
+        <div class="question">
+            <label>16. Which function is used to find the length of a string in Java?</label><br>
+            <input type="radio" name="q16" value="a"> length()<br>
+            <input type="radio" name="q16" value="b"> size()<br>
+            <input type="radio" name="q16" value="c"> strlen()<br>
+        </div>
+        <!-- Question 17 -->
+        <div class="question">
+            <label>17. Which access modifier allows access to a class from any other class?</label><br>
+            <input type="radio" name="q17" value="a"> private<br>
+            <input type="radio" name="q17" value="b"> protected<br>
+            <input type="radio" name="q17" value="c"> public<br>
+        </div>
+        <!-- Question 18 -->
+        <div class="question">
+            <label>18. What is the correct syntax for a main method in Java?</label><br>
+            <input type="radio" name="q18" value="a"> public static void main(String[] args)<br>
+            <input type="radio" name="q18" value="b"> public void static main(String[] args)<br>
+            <input type="radio" name="q18" value="c"> static void main(String[] args)<br>
+        </div>
+        <!-- Question 19 -->
+        <div class="question">
+            <label>19. Which of the following is true about constructors in Java?</label><br>
+            <input type="radio" name="q19" value="a"> They have a return type<br>
+            <input type="radio" name="q19" value="b"> They must be named the same as the class<br>
+            <input type="radio" name="q19" value="c"> They are invoked explicitly<br>
+        </div>
+        <!-- Question 20 -->
+        <div class="question">
+            <label>20. Which of the following collections allows duplicate elements in Java?</label><br>
+            <input type="radio" name="q20" value="a"> Set<br>
+            <input type="radio" name="q20" value="b"> List<br>
+            <input type="radio" name="q20" value="c"> Map<br>
+        </div>
+        <button type="submit">Submit</button>
+        <button type="button" onclick="viewScore()">View Score</button>
+    </form>
+    <div id="result"></div>
+    <div id="certificateButton" style="text-align: center;"></div>
+
+    <script>
+        const answers = {
+            q1: "b", q2: "a", q3: "b", q4: "b", q5: "a", q6: "a", q7: "c", q8: "b",
+                q9: "b", q10: "a", q11: "b", q12: "a", q13: "a", q14: "a", q15: "a", q16: "a",
+                q17: "c", q18: "a", q19: "b", q20: "b"
+        };
+
+        let userScore = null;
+
+        function submitQuiz(event) {
+            event.preventDefault();
+            const form = new FormData(document.getElementById("quizForm"));
+            userScore = 0;
+
+            for (let [key, value] of form.entries()) {
+                if (answers[key] === value) {
+                    userScore++;
+                }
+            }
+
+            alert("Your quiz has been submitted successfully!");
+        }
+
+        function viewScore() {
+            const result = document.getElementById("result");
+            const certificateButton = document.getElementById("certificateButton");
+
+            if (userScore === null) {
+                result.innerHTML = `<h2>Please submit the quiz first!</h2>`;
+                certificateButton.innerHTML = "";
+            } else {
+                const percentage = (userScore / 20) * 100;
+                const coursename = "Java";
+                result.innerHTML = `<h2>Your Score: ${userScore}/20 (${percentage.toFixed(2)}%)</h2>`;
+                localStorage.setItem('course', coursename);
+                localStorage.setItem('quizScore', percentage);
+                
+                if (percentage > 70) {
+                    certificateButton.innerHTML = `<button onclick="generateCertificate()">Generate Certificate</button>`;
+                } else {
+                    certificateButton.innerHTML = "";
+                }
+            }
+        }
+
+        function generateCertificate() {
+            alert("Congratulations! Your certificate is being generated.");
+            // Implement certificate generation logic here (e.g., redirection or PDF download)
+            
+            window.location.href = "Certificate/";
+        }
+    </script>
+</body>
+</html>

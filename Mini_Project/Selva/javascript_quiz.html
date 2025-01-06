@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        form {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        .question label {
+            font-weight: bold;
+        }
+        .question input[type="radio"] {
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        #result {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #certificateButton {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JavaScript Quiz</h1>
+    </header>
+    <form id="quizForm" onsubmit="submitQuiz(event)">
+        <!-- Question 1 -->
+        <div class="question">
+            <label>1. Which company developed JavaScript?</label><br>
+            <input type="radio" name="q1" value="a"> Netscape<br>
+            <input type="radio" name="q1" value="b"> Microsoft<br>
+            <input type="radio" name="q1" value="c"> Sun Microsystems<br>
+        </div>
+        <!-- Question 2 -->
+        <div class="question">
+            <label>2. What is the file extension for JavaScript files?</label><br>
+            <input type="radio" name="q2" value="a"> .java<br>
+            <input type="radio" name="q2" value="b"> .js<br>
+            <input type="radio" name="q2" value="c"> .javascript<br>
+        </div>
+        <!-- Question 3 -->
+        <div class="question">
+            <label>3. Which statement is used to declare a variable in JavaScript?</label><br>
+            <input type="radio" name="q3" value="a"> var<br>
+            <input type="radio" name="q3" value="b"> let<br>
+            <input type="radio" name="q3" value="c"> Both a and b<br>
+        </div>
+        <!-- Question 4 -->
+        <div class="question">
+            <label>4. What does 'DOM' stand for in JavaScript?</label><br>
+            <input type="radio" name="q4" value="a"> Document Object Model<br>
+            <input type="radio" name="q4" value="b"> Data Object Model<br>
+            <input type="radio" name="q4" value="c"> Document Oriented Model<br>
+        </div>
+        <!-- Question 5 -->
+        <div class="question">
+            <label>5. Which method is used to write HTML content dynamically?</label><br>
+            <input type="radio" name="q5" value="a"> document.write()<br>
+            <input type="radio" name="q5" value="b"> document.dynamic()<br>
+            <input type="radio" name="q5" value="c"> document.createHTML()<br>
+        </div>
+        <!-- Question 6 -->
+        <div class="question">
+            <label>6. How do you create a function in JavaScript?</label><br>
+            <input type="radio" name="q6" value="a"> function: myFunction()<br>
+            <input type="radio" name="q6" value="b"> function myFunction()<br>
+            <input type="radio" name="q6" value="c"> createFunction myFunction()<br>
+        </div>
+        <!-- Question 7 -->
+        <div class="question">
+            <label>7. What is the output of 'typeof null' in JavaScript?</label><br>
+            <input type="radio" name="q7" value="a"> object<br>
+            <input type="radio" name="q7" value="b"> null<br>
+            <input type="radio" name="q7" value="c"> undefined<br>
+        </div>
+        <!-- Question 8 -->
+        <div class="question">
+            <label>8. Which symbol is used for comments in JavaScript?</label><br>
+            <input type="radio" name="q8" value="a"> // for single-line<br>
+            <input type="radio" name="q8" value="b"> /* for multi-line */<br>
+            <input type="radio" name="q8" value="c"> Both a and b<br>
+        </div>
+        <!-- Question 9 -->
+        <div class="question">
+            <label>9. Which method converts JSON data into JavaScript objects?</label><br>
+            <input type="radio" name="q9" value="a"> JSON.stringify()<br>
+            <input type="radio" name="q9" value="b"> JSON.parse()<br>
+            <input type="radio" name="q9" value="c"> JSON.toObject()<br>
+        </div>
+        <!-- Question 10 -->
+        <div class="question">
+            <label>10. Which keyword is used to define a constant in JavaScript?</label><br>
+            <input type="radio" name="q10" value="a"> let<br>
+            <input type="radio" name="q10" value="b"> var<br>
+            <input type="radio" name="q10" value="c"> const<br>
+        </div>
+        <label>11. Which function is used to delay code execution?</label><br>
+        <input type="radio" name="q11" value="a"> delay()<br>
+        <input type="radio" name="q11" value="b"> timeout()<br>
+        <input type="radio" name="q11" value="c"> setTimeout()<br>
+    </div>
+    <div class="question">
+        <label>12. What is the output of '2' + 2 in JavaScript?</label><br>
+        <input type="radio" name="q12" value="a"> 4<br>
+        <input type="radio" name="q12" value="b"> 22<br>
+        <input type="radio" name="q12" value="c"> Error<br>
+    </div>
+    <div class="question">
+        <label>13. How do you add an event listener to an element?</label><br>
+        <input type="radio" name="q13" value="a"> element.listen()<br>
+        <input type="radio" name="q13" value="b"> element.addEventListener()<br>
+        <input type="radio" name="q13" value="c"> element.onEvent()<br>
+    </div>
+    <div class="question">
+        <label>14. What is NaN in JavaScript?</label><br>
+        <input type="radio" name="q14" value="a"> A number<br>
+        <input type="radio" name="q14" value="b"> Not a number<br>
+        <input type="radio" name="q14" value="c"> Null and Not<br>
+    </div>
+    <div class="question">
+        <label>15. Which method is used to get elements by class name?</label><br>
+        <input type="radio" name="q15" value="a"> getClass()<br>
+        <input type="radio" name="q15" value="b"> getElementsByClassName()<br>
+        <input type="radio" name="q15" value="c"> querySelector()<br>
+    </div>
+    <label>16. What does '===' mean in JavaScript?</label><br>
+    <input type="radio" name="q16" value="a"> Strict equality<br>
+    <input type="radio" name="q16" value="b"> Assignment<br>
+    <input type="radio" name="q16" value="c"> Loose equality<br>
+</div>
+<div class="question">
+    <label>17. What is an array in JavaScript?</label><br>
+    <input type="radio" name="q17" value="a"> A single value<br>
+    <input type="radio" name="q17" value="b"> An ordered collection of values<br>
+    <input type="radio" name="q17" value="c"> A function<br>
+</div>
+<div class="question">
+    <label>18. How do you find the length of an array?</label><br>
+    <input type="radio" name="q18" value="a"> array.length<br>
+    <input type="radio" name="q18" value="b"> array.size()<br>
+    <input type="radio" name="q18" value="c"> array.count()<br>
+</div>
+<div class="question">
+    <label>19. Which operator is used to check both value and type?</label><br>
+    <input type="radio" name="q19" value="a"> ==<br>
+    <input type="radio" name="q19" value="b"> ===<br>
+    <input type="radio" name="q19" value="c"> =<br>
+</div>
+<div class="question">
+    <label>20. What is a closure in JavaScript?</label><br>
+    <input type="radio" name="q20" value="a"> A function with private variables<br>
+    <input type="radio" name="q20" value="b"> A built-in JavaScript object<br>
+    <input type="radio" name="q20" value="c"> A loop construct<br>
+</div>
+<button type="submit">Submit</button>
+        <button type="button" onclick="viewScore()">View Score</button>
+    </form>
+    <div id="result"></div>
+    <div id="certificateButton" style="text-align: center;"></div>
+
+    <script>
+        const answers = {
+            q1: "b", q2: "c", q3: "b", q4: "a", q5: "a",
+            q6: "b", q7: "c", q8: "a", q9: "a", q10: "b",
+            q11: "c",q12: "b",q13: "b",q14: "b",q15: "b",
+            q16: "c",q17: "c",q18: "a",q19: "c",q20: "a"
+            // Add the remaining answers
+        };
+
+        let userScore = null;
+
+        function submitQuiz(event) {
+            event.preventDefault();
+            const form = new FormData(document.getElementById("quizForm"));
+            userScore = 0;
+
+            for (let [key, value] of form.entries()) {
+                if (answers[key] === value) {
+                    userScore++;
+                }
+            }
+
+            alert("Your quiz has been submitted successfully!");
+        }
+
+        function viewScore() {
+            const result = document.getElementById("result");
+            const certificateButton = document.getElementById("certificateButton");
+
+            if (userScore === null) {
+                result.innerHTML = `<h2>Please submit the quiz first!</h2>`;
+                certificateButton.innerHTML = "";
+            } else {
+                const percentage = (userScore / Object.keys(answers).length) * 100;
+                const coursename = "Java Script";
+                result.innerHTML = `<h2>Your Score: ${userScore}/20 (${percentage.toFixed(2)}%)</h2>`;
+                localStorage.setItem('course', coursename);
+                localStorage.setItem('quizScore', percentage);
+                
+                if (percentage > 70) {
+                    certificateButton.innerHTML = `<button onclick="generateCertificate()">Generate Certificate</button>`;
+                } else {
+                    certificateButton.innerHTML = "";
+                }
+            }
+        }
+
+        function generateCertificate() {
+            alert("Congratulations! Your certificate is being generated.");
+            // Implement certificate generation logic here (e.g., redirection or PDF download)
+            window.location.href = "Certificate/";
+        }
+    </script>
+</body>
+</html>
+
+     
+
+        

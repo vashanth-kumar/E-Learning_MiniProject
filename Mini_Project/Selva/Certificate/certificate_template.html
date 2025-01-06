@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificate of Completion</title>
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .certificate-container {
+            max-width: 900px;
+            margin: 50px auto;
+            padding: 40px;
+            background: #fff;
+            border: 10px solid #1E90FF;
+            border-radius: 20px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .certificate-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .certificate-header h1 {
+            font-size: 2.5em;
+            color: #1E90FF;
+            margin: 0;
+        }
+        .certificate-body {
+            text-align: center;
+        }
+        .certificate-body p {
+            font-size: 1.2em;
+            margin: 10px 0;
+            color: #333;
+        }
+        .certificate-body .name {
+            font-size: 2em;
+            font-weight: bold;
+            margin: 20px 0;
+            color: #000;
+        }
+        .certificate-body .course {
+            font-size: 1.5em;
+            font-style: italic;
+            margin: 20px 0;
+            color: #555;
+        }
+        .certificate-footer {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .certificate-footer .date {
+            font-size: 1.2em;
+            color: #333;
+        }
+        .certificate-footer .id {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .signature {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 50px;
+        }
+        .signature .sign {
+            text-align: center;
+        }
+        .signature .sign img {
+            max-width: 100px;
+            margin-bottom: 5px;
+        }
+        .signature .sign span {
+            display: block;
+            font-size: 0.9em;
+            color: #333;
+            border-top: 1px solid #333;
+            margin-top: 5px;
+            padding-top: 5px;
+        }
+
+         /* Button Styles */
+         #download-button {
+            display: inline-block;
+            background-color: #1E90FF;
+            color: white;
+            font-size: 1.2em;
+            padding: 15px 30px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        
+        #download-button:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+
+        #download-button:active {
+            background-color: #004085;
+            transform: translateY(1px);
+        }
+    </style>
+</head>
+<body>
+    <div class="certificate-container">
+        <div class="certificate-header">
+            <h1>Certificate of Completion</h1>
+        </div>
+        <div class="certificate-body">
+            <p>This is to certify that</p>
+            <div class="name">[Recipient Name]</div>
+            <p>has successfully completed the</p>
+            <div class="course">[Course Name]</div>
+            <p>on</p>
+            <div class="date">[Date]</div>
+            <p>with</p>
+            <div class="score">[score] %</div>
+        </div>
+        <div class="certificate-footer">
+            <p class="id">Certificate ID: [Certificate ID]</p>
+        </div>
+        <div class="signature">
+            <div class="sign">
+                <img src="sign1.png" alt="Signature">
+                <span>Instructor</span>
+            </div>
+            <div class="sign">
+                <img src="sign2.png" alt="Signature">
+                <span>Director</span>
+            </div>
+        </div>
+    </div>
+
+    <center><p>Click the button below to download your certificate.</p>
+    <button id="download-button">Download Certificate</button></center>
+
+    <script>
+        document.getElementById('download-button').addEventListener('click', function() {
+            // Trigger the print dialog
+            window.print();
+        });
+    </script>
+</body>
+</html>

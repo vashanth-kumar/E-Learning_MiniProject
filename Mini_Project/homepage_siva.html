@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>E-Learning Homepage</title>
+    
+    <style> 
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+        
+        /* Body Styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 0;
+        }
+        
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+        
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 20px;
+        }
+        
+        .navbar .menu {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .navbar .btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+        
+        .navbar .btn:hover {
+            background-color: #218838;
+        }
+        
+        /* Main Section */
+        main {
+            padding: 20px;
+            background-color: #fff;
+        }
+        
+        h1, h2 {
+            color: #333;
+        }
+        
+        ul {
+            list-style-type: none;
+        }
+        
+        ul li {
+            padding: 5px;
+        }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            width: 300px;
+        }
+        
+        .close {
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            position: absolute;
+            top: 10px;
+            right: 15px;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <a href="#home" class="logo"><center><h3><b>E-Learning Platform</b></h3></center></a>
+            <div class="menu">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#course">Course</a>
+                <a href="#contact">Contact</a>
+                <a href="#quiz">Quiz</a>
+                <button class="btn" id="admin-sign-in">Admin Sign In</button>
+                <button class="btn" id="admin-sign-up">Admin Sign Up</button>
+                <button class="btn" id="student-sign-in">Student Sign In</button>
+                <button class="btn" id="student-sign-up">Student Sign Up</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Welcome to E-Learning</h1>
+            <p>Your online learning portal to success!</p>
+            <p>Your path to learning starts here. Explore our courses and quizzes.</p>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We offer a wide range of online courses to enhance your learning experience. online learning platform where learners access educational content, participate in activities, and engage with course materials.</p>
+            <p> It is the central hub for delivering online education and typically includes various learning tools such as videos, interactive modules, quizzes, assignments, and discussion forums.</p><p>eLearning sections are designed to be user-friendly, providing learners with a flexible, accessible, and engaging way to learn at their own pace, often from anywhere in the world.</p>
+                <ul><li><b>Professional Development:</b> Enhance your career with courses in business, technology, leadership, marketing, and more.</li>
+          <li><b>Creative Arts:</b> Unlock your creativity with courses in graphic design, photography, music production, and writing.</li>
+          <li><b>Academic Support:</b> Dive deep into subjects like mathematics, science, language learning, and more.</li>
+          <li><b>Certifications:</b> Earn certificates that showcase your newly acquired skills and advance your career prospects.</li></ul>
+              </p>
+        </section>
+
+        <section id="course">
+            <h2>Our Courses</h2>
+            <ul style="list-style-type:square;">
+                <li>Web Development</li>
+                <li>Data Science </li>
+                <li>Machine Learning</li>
+                <li>Advanced Java Programming</li>
+                <li>Cyber Security</li>
+                <li>Artificial Intelligence</li>
+                <li>Data Networking</li>
+                <li>Cloud Computing</li>
+                <li>Relation Database using SQL</li>
+                <li>Data Structures and its Algorithms</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>Email: <a href= "mailto: shivasubramanian3332@gmail.com"> shivasubramanian3332@gmail.com </a></p>
+            <p><a href="tel:+4733378901">+47 333 78 901</a></p>
+        </section>
+
+        <section id="quiz">
+            <h2>Take a Quiz</h2>
+            <p>Test your knowledge with our interactive quizzes.</p>
+            <p>It is essential for assessing learner progress, reinforcing concepts, and providing feedback.</p>
+            <p> A well-structured quiz section can help keep learners engaged while enabling instructors to evaluate how well the material has been understood.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 E-Learning Platform. All rights reserved.</p>
+    </footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Programming Course - Multi-Page Content</title>
+    <style>
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff; /* Light blue background */
+            color: #333;
+        }
+
+        header {
+            background-color: #4caf50; /* Green */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 34px;
+        }
+
+        header p {
+            font-size: 18px;
+            font-style: italic;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .topic h2 {
+            font-size: 26px;
+            color: #4caf50; /* Match header color */
+            margin-bottom: 15px;
+            border-bottom: 2px solid #4caf50;
+            display: inline-block;
+        }
+
+        .topic p,
+        .topic ul {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        .example {
+            background-color: #e8f5e9; /* Pale green */
+            border-left: 5px solid #4caf50; /* Match header color */
+            padding: 15px;
+            margin-top: 10px;
+            font-size: 15px;
+            overflow-x: auto;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .example h4 {
+            color: #2e7d32; /* Dark green */
+            margin-bottom: 10px;
+        }
+
+        pre {
+            background-color: #f4f6f8;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+
+        .navigation-buttons {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .navigation-buttons button {
+            background-color: #4caf50; /* Green */
+            color: #fff;
+            border: none;
+            padding: 12px 18px;
+            margin: 0 8px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .navigation-buttons button:hover {
+            background-color: #388e3c; /* Darker green */
+            transform: scale(1.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #4caf50; /* Green */
+            color: #fff;
+            margin-top: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            color: #00796b; /* Teal */
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Python Programming Course</h1>
+        <p>Master the Foundations and Advanced Concepts of Python Programming</p>
+    </header>
+
+    <div id="page1" class="page">
+        <h2>1. Introduction to Python Programming</h2>
+        <p>
+            Python is a high-level, interpreted programming language known for its simplicity, versatility, and readability. 
+            It's widely used in various fields such as web development, data science, artificial intelligence, automation, 
+            and more.
+        </p>
+        <h3>Key Features of Python</h3>
+        <ul>
+            <li><strong>Easy to Learn:</strong> Python has a simple syntax that mimics natural language, making it beginner-friendly.</li>
+            <li><strong>Interpreted Language:</strong> Python code is executed line-by-line, which makes debugging easier.</li>
+            <li><strong>Extensive Libraries:</strong> Python offers powerful libraries like NumPy, Pandas, and TensorFlow for specialized tasks.</li>
+            <li><strong>Cross-Platform:</strong> Python runs on Windows, Mac, Linux, and other operating systems.</li>
+            <li><strong>Open Source:</strong> Python is free to use and has a large supportive community.</li>
+        </ul>
+    
+        <h3>Setting Up Python</h3>
+        <p>Follow these steps to install Python on your computer:</p>
+        <ol>
+            <li>Download the Python installer from the <a href="https://www.python.org" target="_blank">official Python website</a>.</li>
+            <li>Run the installer and ensure you check the option to add Python to your system's PATH.</li>
+            <li>Verify the installation by typing <code>python --version</code> in your terminal or command prompt.</li>
+        </ol>
+    
+        <h3>Writing Your First Python Program</h3>
+        <p>To get started, open a text editor and write the following code:</p>
+        <div class="example">
+            <h4>Example: Hello, World!</h4>
+            <pre>
+    # This is your first Python program
+    print("Hello, World!")
+            </pre>
+        </div>
+        <p>Save the file with a <code>.py</code> extension and run it using the command:</p>
+        <pre>python filename.py</pre>
+    
+        <h3>Basic Syntax</h3>
+        <p>Python's syntax is straightforward. Here are some key rules:</p>
+        <ul>
+            <li>Use indentation to define blocks of code.</li>
+            <li>Comments are written using <code>#</code> for single-line or triple quotes for multi-line comments.</li>
+            <li>Python is case-sensitive, so variable names like <code>age</code> and <code>Age</code> are different.</li>
+        </ul>
+        <div class="example">
+            <h4>Example: Indentation and Comments</h4>
+            <pre>
+    # This is a single-line comment
+    """
+    This is a
+    multi-line comment
+    """
+    def greet(name):
+        print("Hello,", name)
+    greet("Alice")  # Function call
+            </pre>
+        </div>
+    
+        <h3>Data Types</h3>
+        <p>Python provides various built-in data types such as:</p>
+        <ul>
+            <li><strong>int:</strong> Represents integers (e.g., 5, -10).</li>
+            <li><strong>float:</strong> Represents decimal numbers (e.g., 3.14, -0.99).</li>
+            <li><strong>str:</strong> Represents strings (e.g., "Hello").</li>
+            <li><strong>bool:</strong> Represents boolean values (<code>True</code> or <code>False</code>).</li>
+            <li><strong>list:</strong> Represents ordered collections (e.g., [1, 2, 3]).</li>
+        </ul>
+        <div class="example">
+            <h4>Example: Data Types</h4>
+            <pre>
+    # Defining variables
+    age = 25
+    height = 5.9
+    name = "Alice"
+    is_student = True
+    
+    # Printing their types
+    print(type(age))       # Output: <class 'int'>
+    print(type(height))    # Output: <class 'float'>
+    print(type(name))      # Output: <class 'str'>
+    print(type(is_student))# Output: <class 'bool'>
+            </pre>
+        </div>
+    
+        <h3>Exercise 1</h3>
+        <p>Write a Python program that:</p>
+        <ol>
+            <li>Accepts a user's name and age as input.</li>
+            <li>Prints a personalized greeting along with the year they'll turn 100 years old.</li>
+        </ol>
+        <div class="example">
+            <h4>Example Solution</h4>
+            <pre>
+    # Getting user input
+    name = input("Enter your name: ")
+    age = int(input("Enter your age: "))
+    
+    # Calculating the year when they will turn 100
+    current_year = 2024
+    year_100 = current_year + (100 - age)
+    
+    print(f"Hello {name}, you will turn 100 years old in the year {year_100}.")
+            </pre>
+        </div>
+    </div>
+    
+    
+    <div id="page2" class="page" style="display: none;">
+        <h2>2. Control Flow and Loops</h2>
+        <p>
+            Control flow in Python refers to the order in which individual statements, instructions, or function calls are executed or evaluated. 
+            Python supports conditional statements to allow decision-making and loops for repeated execution of code.
+        </p>
+        <h3>Control Flow</h3>
+        <p>
+            Python provides several ways to control the flow of execution through the program. These control structures are essential for decision-making.
+        </p>
+        <h4>If-Else Statement</h4>
+        <p>
+            The <code>if</code> statement allows you to check a condition and execute code depending on whether the condition is true or false.
+        </p>
+        <div class="example">
+            <h4>Example: If-Else</h4>
+            <pre>
+    # Check if a number is even or odd
+    number = 10
+    if number % 2 == 0:
+        print("Even number")
+    else:
+        print("Odd number")
+            </pre>
+        </div>
+        <h4>Elif Statement</h4>
+        <p>
+            The <code>elif</code> statement allows you to check multiple conditions. It is short for "else if," and it checks another condition if the previous one was false.
+        </p>
+        <div class="example">
+            <h4>Example: Elif</h4>
+            <pre>
+    # Check the day of the week
+    day = 3
+    if day == 1:
+        print("Monday")
+    elif day == 2:
+        print("Tuesday")
+    elif day == 3:
+        print("Wednesday")
+    else:
+        print("Weekend")
+            </pre>
+        </div>
+    
+        <h3>Loops</h3>
+        <p>
+            Loops allow for repeating a block of code multiple times. Python has two primary types of loops: <code>for</code> and <code>while</code>.
+        </p>
+        <h4>For Loop</h4>
+        <p>
+            A <code>for</code> loop is used to iterate over a sequence (like a list, tuple, or string) and execute the block of code for each item in the sequence.
+        </p>
+        <div class="example">
+            <h4>Example: For Loop</h4>
+            <pre>
+    # Loop through a list of numbers and print them
+    numbers = [1, 2, 3, 4, 5]
+    for num in numbers:
+        print(num)
+            </pre>
+        </div>
+    
+        <h4>Range Function</h4>
+        <p>
+            The <code>range()</code> function is commonly used with for loops to generate a sequence of numbers, useful when you don’t have a predefined list.
+        </p>
+        <div class="example">
+            <h4>Example: Using Range</h4>
+            <pre>
+    # Loop through numbers from 0 to 4
+    for i in range(5):
+        print(i)
+            </pre>
+        </div>
+    
+        <h4>While Loop</h4>
+        <p>
+            The <code>while</code> loop repeats as long as a given condition is true. It’s useful when you don’t know the exact number of iterations in advance.
+        </p>
+        <div class="example">
+            <h4>Example: While Loop</h4>
+            <pre>
+    # Print numbers from 1 to 5
+    count = 1
+    while count <= 5:
+        print(count)
+        count += 1
+            </pre>
+        </div>
+    
+        <h4>Breaking Out of Loops</h4>
+        <p>
+            The <code>break</code> statement can be used to exit a loop prematurely, even if the condition hasn’t been met.
+        </p>
+        <div class="example">
+            <h4>Example: Breaking Out of a Loop</h4>
+            <pre>
+    # Stop the loop when the number is 3
+    for num in range(5):
+        if num == 3:
+            break
+        print(num)
+            </pre>
+        </div>
+    
+        <h4>Skipping Iterations with Continue</h4>
+        <p>
+            The <code>continue</code> statement skips the current iteration and moves to the next one, without terminating the entire loop.
+        </p>
+        <div class="example">
+            <h4>Example: Using Continue</h4>
+            <pre>
+    # Skip printing 3
+    for num in range(5):
+        if num == 3:
+            continue
+        print(num)
+            </pre>
+        </div>
+    
+        <h3>Nested Loops</h3>
+        <p>
+            A nested loop is a loop inside another loop. It’s useful when working with multi-dimensional structures like matrices.
+        </p>
+        <div class="example">
+            <h4>Example: Nested Loops</h4>
+            <pre>
+    # Loop through a 2D list (list of lists)
+    matrix = [[1, 2], [3, 4], [5, 6]]
+    for row in matrix:
+        for elem in row:
+            print(elem)
+            </pre>
+        </div>
+    </div>
+    <div id="page3" class="page" style="display: none;">
+        <h2>3. Functions and Modules</h2>
+        <p>
+            Functions in Python are blocks of reusable code that perform a specific task. Functions help make your code modular and organized.
+        </p>
+        <h3>Functions</h3>
+        <p>
+            A function is defined using the <code>def</code> keyword, followed by the function name and a set of parentheses (which can include parameters). 
+            You can return values from a function using the <code>return</code> keyword.
+        </p>
+        <div class="example">
+            <h4>Example: Defining a Function</h4>
+            <pre>
+    # Define a function to greet a person
+    def greet(name):
+        print(f"Hello, {name}!")
+    
+    greet("Alice")
+            </pre>
+        </div>
+    
+        <h4>Returning Values from Functions</h4>
+        <p>
+            You can use the <code>return</code> statement to return values from a function, which can then be used in other parts of the program.
+        </p>
+        <div class="example">
+            <h4>Example: Returning a Value</h4>
+            <pre>
+    # Define a function to add two numbers
+    def add(a, b):
+        return a + b
+    
+    result = add(5, 3)
+    print(f"Sum: {result}")
+            </pre>
+        </div>
+    
+        <h4>Multiple Parameters</h4>
+        <p>
+            Functions can take multiple parameters to accept more than one value. You can specify default values for parameters as well.
+        </p>
+        <div class="example">
+            <h4>Example: Multiple Parameters</h4>
+            <pre>
+    # Define a function to calculate the area of a rectangle
+    def area(length, width=5):
+        return length * width
+    
+    print(area(10))
+    print(area(10, 7))
+            </pre>
+        </div>
+    
+        <h4>Lambda Functions</h4>
+        <p>
+            Lambda functions are anonymous functions defined using the <code>lambda</code> keyword. They are usually short functions with one expression.
+        </p>
+        <div class="example">
+            <h4>Example: Lambda Function</h4>
+            <pre>
+    # Define a lambda function for addition
+    add = lambda a, b: a + b
+    print(add(5, 3))
+            </pre>
+        </div>
+    
+        <h3>Modules</h3>
+        <p>
+            Python modules are files that contain Python code. A module can define functions, classes, and variables, and it can include runnable code. 
+            You can import and use functions and variables from other modules in your program.
+        </p>
+        <h4>Importing Modules</h4>
+        <p>
+            The <code>import</code> statement is used to include external Python modules in your program.
+        </p>
+        <div class="example">
+            <h4>Example: Importing a Module</h4>
+            <pre>
+    # Import the math module
+    import math
+    result = math.sqrt(16)
+    print(f"Square root: {result}")
+            </pre>
+        </div>
+    
+        <h4>Using Aliases for Modules</h4>
+        <p>
+            You can use an alias when importing a module to shorten its name for convenience.
+        </p>
+        <div class="example">
+            <h4>Example: Using an Alias</h4>
+            <pre>
+    # Import the math module with an alias
+    import math as m
+    print(m.sqrt(16))
+            </pre>
+        </div>
+    
+        <h4>Built-in Modules</h4>
+        <p>
+            Python has a large standard library with built-in modules, such as <code>math</code>, <code>os</code>, <code>random</code>, and many more.
+        </p>
+        <div class="example">
+            <h4>Example: Using the Random Module</h4>
+            <pre>
+    # Generate a random number between 1 and 10
+    import random
+    random_number = random.randint(1, 10)
+    print(f"Random number: {random_number}")
+            </pre>
+        </div>
+    </div>
+    <div id="page4" class="page" style="display: none;">
+        <h2>4. Data Structures</h2>
+        <p>
+            Data structures are used to store and organize data in a way that makes it easier to access and modify. Python offers a variety of data structures, including lists, tuples, dictionaries, and sets.
+        </p>
+        <h3>Lists</h3>
+        <p>
+            Lists are ordered collections of items that can hold elements of any type. Lists are mutable, which means their elements can be changed after creation.
+        </p>
+        <div class="example">
+            <h4>Example: Creating and Modifying a List</h4>
+            <pre>
+    # Create a list
+    fruits = ["apple", "banana", "cherry"]
+    fruits.append("orange")
+    fruits[1] = "blueberry"
+    print(fruits)
+            </pre>
+        </div>
+    
+        <h4>List Methods</h4>
+        <p>
+            Python provides several methods to manipulate lists. Common methods include <code>append()</code>, <code>remove()</code>, <code>sort()</code>, and <code>reverse()</code>.
+        </p>
+        <div class="example">
+            <h4>Example: List Methods</h4>
+            <pre>
+    # Add an item to a list
+    fruits.append("grapes")
+    # Remove an item
+    fruits.remove("banana")
+    # Sort the list
+    fruits.sort()
+    print(fruits)
+            </pre>
+        </div>
+    
+        <h3>Dictionaries</h3>
+        <p>
+            Dictionaries store data in key-value pairs. The keys must be unique and immutable, and the values can be of any data type.
+        </p>
+        <div class="example">
+            <h4>Example: Creating a Dictionary</h4>
+            <pre>
+    # Create a dictionary
+    person = {"name": "Alice", "age": 25, "city": "New York"}
+    print(person["name"])
+            </pre>
+        </div>
+    
+        <h4>Dictionary Methods</h4>
+        <p>
+            Some commonly used dictionary methods include <code>get()</code>, <code>keys()</code>, <code>values()</code>, and <code>items()</code>.
+        </p>
+        <div class="example">
+            <h4>Example: Dictionary Methods</h4>
+            <pre>
+    # Get a value by key
+    name = person.get("name")
+    # List all keys
+    keys = person.keys()
+    print(name, keys)
+            </pre>
+        </div>
+    
+        <h3>Tuples</h3>
+        <p>
+            Tuples are similar to lists, but they are immutable. Once created, their elements cannot be changed.
+        </p>
+        <div class="example">
+            <h4>Example: Creating and Accessing a Tuple</h4>
+            <pre>
+    # Create a tuple
+    colors = ("red", "green", "blue")
+    print(colors[1])  # Access the second element
+            </pre>
+        </div>
+    
+        <h4>Using Tuples as Dictionary Keys</h4>
+        <p>
+            Since tuples are immutable, they can be used as keys in dictionaries, unlike lists.
+        </p>
+        <div class="example">
+            <h4>Example: Using a Tuple as a Dictionary Key</h4>
+            <pre>
+    # Use a tuple as a key
+    person_info = {("Alice", 25): "Engineer"}
+    print(person_info[("Alice", 25)])
+            </pre>
+        </div>
+    
+        <h3>Sets</h3>
+        <p>
+            A set is an unordered collection of unique elements. Sets are useful when you need to ensure that no duplicates are present.
+        </p>
+        <div class="example">
+            <h4>Example: Creating and Modifying a Set</h4>
+            <pre>
+    # Create a set
+    fruits = {"apple", "banana", "cherry"}
+    fruits.add("orange")
+    fruits.remove("banana")
+    print(fruits)
+            </pre>
+        </div>
+    </div>
+    
+        <!-- Navigation Buttons -->
+        <div class="navigation-buttons">
+            <button id="prevBtn" onclick="navigate(-1)" style="display: none;">Previous</button>
+            <button id="nextBtn" onclick="navigate(1)">Next</button>
+            <button id="homeBtn" onclick="navigateToHome()" style="display: none;">Home</button>
+        </div>
+    </div>
+
+    
+
+    
+    <footer>
+        <p>&copy; 2024 Endless Learning. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let currentPage = 1;
+        const totalPages = 4;
+
+        function navigate(direction) {
+            document.getElementById(`page${currentPage}`).style.display = 'none';
+            currentPage += direction;
+
+            // Show the current page
+            document.getElementById(`page${currentPage}`).style.display = 'block';
+
+            // Update button visibility
+            document.getElementById('prevBtn').style.display = currentPage === 1 ? 'none' : 'inline-block';
+            document.getElementById('nextBtn').style.display = currentPage === totalPages ? 'none' : 'inline-block';
+            document.getElementById('homeBtn').style.display = currentPage === totalPages ? 'inline-block' : 'none';
+        }
+
+        function navigateToHome() {
+            document.getElementById(`page${currentPage}`).style.display = 'none';
+            currentPage = 1;
+            document.getElementById(`page${currentPage}`).style.display = 'block';
+            document.getElementById('prevBtn').style.display = 'none';
+            document.getElementById('nextBtn').style.display = 'inline-block';
+            document.getElementById('homeBtn').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

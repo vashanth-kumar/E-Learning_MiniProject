@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        header {
+            background: #4CAF50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        form {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .question {
+            margin-bottom: 15px;
+        }
+        .question label {
+            font-weight: bold;
+        }
+        .question input[type="radio"] {
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        #result {
+            text-align: center;
+            margin-top: 20px;
+        }
+        #certificateButton {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>C Quiz</h1>
+    </header>
+    <form id="quizForm" onsubmit="submitQuiz(event)">
+        <!-- Question 1 -->
+        <div class="question">
+            <label>1. What is the size of an int data type in C?</label><br>
+            <input type="radio" name="q1" value="a"> 2 bytes<br>
+            <input type="radio" name="q1" value="b"> 4 bytes<br>
+            <input type="radio" name="q1" value="c"> 8 bytes<br>
+        </div>
+        <!-- Question 2 -->
+        <div class="question">
+            <label>2. What is the keyword to define a constant in C?</label><br>
+            <input type="radio" name="q2" value="a"> const<br>
+            <input type="radio" name="q2" value="b"> define<br>
+            <input type="radio" name="q2" value="c"> constant<br>
+        </div>
+        <!-- Question 3 -->
+        <div class="question">
+            <label>3. Which of the following is a valid variable name in C?</label><br>
+            <input type="radio" name="q3" value="a"> int#1<br>
+            <input type="radio" name="q3" value="b"> _variable<br>
+            <input type="radio" name="q3" value="c"> 1variable<br>
+        </div>
+        <!-- Question 4 -->
+        <div class="question">
+            <label>4. What is the default return type of a function in C?</label><br>
+            <input type="radio" name="q4" value="a"> int<br>
+            <input type="radio" name="q4" value="b"> void<br>
+            <input type="radio" name="q4" value="c"> float<br>
+        </div>
+        <!-- Question 5 -->
+        <div class="question">
+            <label>5. What is the correct syntax to include a header file?</label><br>
+            <input type="radio" name="q5" value="a"> #include &lt;header.h&gt;<br>
+            <input type="radio" name="q5" value="b"> include &lt;header.h&gt;<br>
+            <input type="radio" name="q5" value="c"> include header.h<br>
+        </div>
+        <!-- Question 6 -->
+        <div class="question">
+            <label>6. Which operator is used to access the value at the address stored in a pointer?</label><br>
+            <input type="radio" name="q6" value="a"> *<br>
+            <input type="radio" name="q6" value="b"> &<br>
+            <input type="radio" name="q6" value="c"> -><br>
+        </div>
+        <!-- Question 7 -->
+        <div class="question">
+            <label>7. Which loop is guaranteed to execute at least once?</label><br>
+            <input type="radio" name="q7" value="a"> for<br>
+            <input type="radio" name="q7" value="b"> while<br>
+            <input type="radio" name="q7" value="c"> do-while<br>
+        </div>
+        <!-- Question 8 -->
+        <div class="question">
+            <label>8. What is the output of printf("%d", 5 + 3 * 2);?</label><br>
+            <input type="radio" name="q8" value="a"> 11<br>
+            <input type="radio" name="q8" value="b"> 16<br>
+            <input type="radio" name="q8" value="c"> 21<br>
+        </div>
+        <!-- Question 9 -->
+        <div class="question">
+            <label>9. What does the 'return 0;' statement signify?</label><br>
+            <input type="radio" name="q9" value="a"> End of program<br>
+            <input type="radio" name="q9" value="b"> Successful execution<br>
+            <input type="radio" name="q9" value="c"> Both a and b<br>
+        </div>
+        <!-- Question 10 -->
+        <div class="question">
+            <label>10. Which of the following is a relational operator?</label><br>
+            <input type="radio" name="q10" value="a"> =<br>
+            <input type="radio" name="q10" value="b"> ==<br>
+            <input type="radio" name="q10" value="c"> ===<br>
+        </div>
+        <!-- Question 11 -->
+        <div class="question">
+            <label>11. Which of the following is a valid pointer declaration?</label><br>
+            <input type="radio" name="q11" value="a"> int ptr<br>
+            <input type="radio" name="q11" value="b"> int *ptr<br>
+            <input type="radio" name="q11" value="c"> int ptr*<br>
+        </div>
+        <!-- Question 12 -->
+        <div class="question">
+            <label>12. What is the value of an uninitialized int variable?</label><br>
+            <input type="radio" name="q12" value="a"> 0<br>
+            <input type="radio" name="q12" value="b"> Garbage value<br>
+            <input type="radio" name="q12" value="c"> NULL<br>
+        </div>
+        <!-- Question 13 -->
+        <div class="question">
+            <label>13. What does malloc() do?</label><br>
+            <input type="radio" name="q13" value="a"> Allocates memory dynamically<br>
+            <input type="radio" name="q13" value="b"> Deallocates memory<br>
+            <input type="radio" name="q13" value="c"> Resizes memory<br>
+        </div>
+        <!-- Question 14 -->
+        <div class="question">
+            <label>14. What does the sizeof() operator return?</label><br>
+            <input type="radio" name="q14" value="a"> The memory address<br>
+            <input type="radio" name="q14" value="b"> The data type<br>
+            <input type="radio" name="q14" value="c"> The size of the variable in bytes<br>
+        </div>
+        <!-- Question 15 -->
+        <div class="question">
+            <label>15. What does printf() do?</label><br>
+            <input type="radio" name="q15" value="a"> Outputs formatted data to the screen<br>
+            <input type="radio" name="q15" value="b"> Reads input from the user<br>
+            <input type="radio" name="q15" value="c"> Terminates the program<br>
+        </div>
+        <!-- Question 16 -->
+        <div class="question">
+            <label>16. Which of the following functions is used to find the length of a string in C?</label><br>
+            <input type="radio" name="q16" value="a"> strlen<br>
+            <input type="radio" name="q16" value="b"> length<br>
+            <input type="radio" name="q16" value="c"> size<br>
+        </div>
+        <!-- Question 17 -->
+        <div class="question">
+            <label>17. What is the output of the expression (10 > 5) && (5 > 3)?</label><br>
+            <input type="radio" name="q17" value="a"> true<br>
+            <input type="radio" name="q17" value="b"> false<br>
+            <input type="radio" name="q17" value="c"> Compilation error<br>
+        </div>
+        <!-- Question 18 -->
+        <div class="question">
+            <label>18. Which of the following is a type of loop in C?</label><br>
+            <input type="radio" name="q18" value="a"> if<br>
+            <input type="radio" name="q18" value="b"> for<br>
+            <input type="radio" name="q18" value="c"> switch<br>
+        </div>
+        <!-- Question 19 -->
+        <div class="question">
+            <label>19. What is a function in C?</label><br>
+            <input type="radio" name="q19" value="a"> A block of code that performs a task<br>
+            <input type="radio" name="q19" value="b"> A variable<br>
+            <input type="radio" name="q19" value="c"> A data type<br>
+        </div>
+        <!-- Question 20 -->
+        <div class="question">
+            <label>20. What is the purpose of the 'break' statement in C?</label><br>
+            <input type="radio" name="q20" value="a"> Exit a loop<br>
+            <input type="radio" name="q20" value="b"> Skip an iteration<br>
+            <input type="radio" name="q20" value="c"> Continue the loop<br>
+        </div>
+        <button type="submit">Submit</button>
+        <button type="button" onclick="viewScore()">View Score</button>
+    </form>
+    <div id="result"></div>
+    <div id="certificateButton" style="text-align: center;"></div>
+
+    <script>
+        const answers = {
+            q1: "b", q2: "a", q3: "b", q4: "a", q5: "a",
+            q6: "a", q7: "c", q8: "b", q9: "b", q10: "b",
+            q11: "b", q12: "b", q13: "a", q14: "c", q15: "a",
+            q16: "a", q17: "a", q18: "b", q19: "a", q20: "a"
+        };
+
+        let userScore = null;
+
+        function submitQuiz(event) {
+            event.preventDefault();
+            const form = new FormData(document.getElementById("quizForm"));
+            userScore = 0;
+
+            // Loop through form entries to compare answers
+            for (let [key, value] of form.entries()) {
+                if (answers[key] === value) {
+                    userScore++;
+                }
+            }
+
+            alert("Your quiz has been submitted successfully!");
+        }
+
+        function viewScore() {
+            const result = document.getElementById("result");
+            const certificateButton = document.getElementById("certificateButton");
+
+            if (userScore === null) {
+                result.innerHTML = `<h2>Please submit the quiz first!</h2>`;
+                certificateButton.innerHTML = "";
+            } else {
+                const percentage = (userScore / 20) * 100;
+                const coursename = "C";
+                result.innerHTML = `<h2>Your Score: ${userScore}/20 (${percentage.toFixed(2)}%)</h2>`;
+
+                // Store score in localStorage
+                localStorage.setItem('quizScore', percentage);
+                localStorage.setItem('course', coursename);
+
+                if (percentage > 7) { // Changed to 70% for a more reasonable certificate condition
+                    certificateButton.innerHTML = `<button onclick="generateCertificate()">Generate Certificate</button>`;
+                } else {
+                    certificateButton.innerHTML = "";
+                }
+            }
+        }
+
+        function generateCertificate() {
+            alert("Congratulations! Your certificate is being generated.");
+            // Implement certificate generation logic here (e.g., redirection or PDF download)
+            window.location.href = "Certificate/";  // Change this path to your actual certificate generation logic
+        }
+    </script>
+</body>
+</html>

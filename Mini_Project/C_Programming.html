@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Programming Course - Professional Curriculum</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px 10px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        nav {
+    background-color: #007bff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+        .container {
+            width: 90%;  /* Make the card take full width */
+            max-width: 1200px; /* Optional, to limit the maximum width */
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+
+        .intro {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .intro p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .topic {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 15px;
+        }
+
+        .topic h3 {
+            font-size: 22px;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .topic p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .example {
+            background-color: #f1f1f1;
+            border-left: 4px solid #007bff;
+            padding: 10px;
+            margin-top: 15px;
+            font-size: 16px;
+        }
+
+        .back-to-home-container {
+        text-align: right; /* Align the button to the right */
+        margin: 20px 0; /* Add spacing before the footer */
+    }
+
+    .back-to-home {
+        display: inline-block;
+        background-color: #007bff;
+        color: white;
+        padding: 10px 15px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 16px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease;
+    }
+
+    .back-to-home:hover {
+        background-color: #0056b3;
+    }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #007bff;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 24px;
+            }
+
+            .topic h3 {
+                font-size: 18px;
+            }
+
+            .topic p {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1>C Programming Course</h1>
+        <p>Learn, Practice, and Master C Programming</p>
+    </header>
+
+    <!-- Container -->
+    <div class="container">
+        <!-- Introduction -->
+        <div class="intro">
+            <h2>Welcome to the C Programming Course</h2>
+            <p>
+                This course is designed to give you a strong foundation in C programming. 
+                With step-by-step explanations, practical examples, and hands-on projects, 
+                you'll be ready to write efficient and reliable programs in no time!
+            </p>
+        </div>
+
+        <!-- Curriculum -->
+        <h2>Curriculum</h2>
+        <p>Explore each topic in detail:</p>
+
+        <!-- Topic 1: Introduction to C Programming -->
+        <div class="topic" id="topic1">
+            <h3>1. Introduction to C Programming</h3>
+            <p>C is a powerful general-purpose programming language. It is one of the most popular languages in system programming. Understanding the basics of C will give you the skills needed to write efficient programs that interact with the system and hardware.</p>
+            <p>Topics covered in this section include:</p>
+            <ul>
+                <li>The history and significance of C programming.</li>
+                <li>Setting up a development environment for C (compilers and IDEs).</li>
+                <li>Basic structure of a C program (e.g., main function, header files).</li>
+            </ul>
+            <div class="example">
+                <p><strong>Example Program:</strong></p>
+                <pre>
+#include <stdio.h>
+
+int main() {
+    printf("Hello, C World!");
+    return 0;
+}
+                </pre>
+                <p>This simple program prints "Hello, C World!" to the console.</p>
+            </div>
+        </div>
+
+        <!-- Topic 2: Variables, Data Types, and Operators -->
+        <div class="topic" id="topic2">
+            <h3>2. Variables, Data Types, and Operators</h3>
+            <p>In C, variables are used to store data. Understanding the types of data and how to use operators allows you to perform operations on that data.</p>
+            <p>Key concepts include:</p>
+            <ul>
+                <li>Declaring and initializing variables.</li>
+                <li>Different data types (e.g., int, float, char, double).</li>
+                <li>Basic operators (arithmetic, relational, logical, and assignment operators).</li>
+            </ul>
+            <div class="example">
+                <p><strong>Example Program:</strong></p>
+                <pre>
+#include <stdio.h>
+
+int main() {
+    int a = 5, b = 3;
+    printf("Sum: %d", a + b);
+    return 0;
+}
+                </pre>
+                <p>This program adds two integers and prints the result.</p>
+            </div>
+        </div>
+
+        <!-- Topic 3: Control Statements (if, else, loops) -->
+        <div class="topic" id="topic3">
+            <h3>3. Control Statements (if, else, loops)</h3>
+            <p>Control statements allow you to alter the flow of your program based on conditions or repeat actions. You'll learn how to make decisions and iterate through code efficiently.</p>
+            <p>Important control statements include:</p>
+            <ul>
+                <li><code>if</code>, <code>else</code>, and <code>switch</code> for decision-making.</li>
+                <li><code>for</code>, <code>while</code>, and <code>do-while</code> loops for iteration.</li>
+            </ul>
+            <div class="example">
+                <p><strong>Example Program:</strong></p>
+                <pre>
+#include <stdio.h>
+
+int main() {
+    int num = 5;
+    if (num > 0) {
+        printf("Positive Number");
+    } else {
+        printf("Negative Number");
+    }
+    return 0;
+}
+                </pre>
+                <p>This program checks if a number is positive or negative using an if-else statement.</p>
+            </div>
+        </div>
+
+        <!-- Topic 4: Functions and Modular Programming -->
+        <div class="topic" id="topic4">
+            <h3>4. Functions and Modular Programming</h3>
+            <p>Functions allow you to organize your code into reusable modules. Learning how to define and call functions is a key skill in C programming.</p>
+            <p>Topics covered:</p>
+            <ul>
+                <li>Function declaration, definition, and calling.</li>
+                <li>Parameters and return values.</li>
+                <li>Recursive functions (optional for advanced learners).</li>
+            </ul>
+            <div class="example">
+                <p><strong>Example Program:</strong></p>
+                <pre>
+#include <stdio.h>
+
+int add(int a, int b) {
+    return a + b;
+}
+
+int main() {
+    printf("Sum: %d", add(5, 3));
+    return 0;
+}
+                </pre>
+                <p>This program demonstrates how to use a function to add two numbers.</p>
+            </div>
+        </div>
+
+        <!-- Topic 5: Pointers and Memory Management -->
+        <div class="topic" id="topic5">
+            <h3>5. Pointers and Memory Management</h3>
+            <p>Pointers are a unique and powerful feature in C that allows you to work directly with memory addresses. You'll learn how to use pointers for dynamic memory allocation and passing large data structures efficiently.</p>
+            <p>Key topics:</p>
+            <ul>
+                <li>Pointer declaration and usage.</li>
+                <li>Dynamic memory allocation using <code>malloc</code>, <code>calloc</code>, and <code>free</code>.</li>
+                <li>Pointer arithmetic and array handling.</li>
+            </ul>
+            <div class="example">
+                <p><strong>Example Program:</strong></p>
+                <pre>
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int *ptr = (int*)malloc(sizeof(int));
+    *ptr = 10;
+    printf("Value: %d", *ptr);
+    free(ptr);
+    return 0;
+}
+                </pre>
+                <p>This program demonstrates dynamic memory allocation and deallocation using pointers.</p>
+            </div>
+        </div>
+
+        <!-- Topic 6: File Handling in C -->
+        <div class="topic" id="topic6">
+            <h3>6. File Handling in C</h3>
+            <p>Learn how to handle files in C, such as reading from and writing to files. This is essential for many real-world applications where data needs to be stored permanently.</p>
+            <p>Key topics:</p>
+            <ul>
+                <li>Opening, closing, reading, and writing to files.</li>
+                <li>Working with different file modes (e.g., read, write, append).</li>
+            </ul>
+            <div class="example">
+                <p><strong>Example Program:</strong></p>
+                <pre>
+#include <stdio.h>
+
+int main() {
+    FILE *file = fopen("example.txt", "w");
+    fprintf(file, "Hello, file handling!");
+    fclose(file);
+    return 0;
+}
+                </pre>
+                <p>This program writes text to a file named "example.txt".</p>
+            </div>
+        </div>
+
+        <!-- Topic 7: Practice Projects and Quizzes -->
+        <div class="topic" id="topic7">
+            <h3>7. Practice Projects and Quizzes</h3>
+            <p>Apply your learning with real-world projects and quizzes. Practice makes perfect, and these projects will help solidify your understanding of each topic.</p>
+            <ul>
+                <li>Create a simple calculator.</li>
+                <li>Build a text-based game (like a guessing game).</li>
+                <li>Take quizzes after each section to reinforce your understanding.</li>
+            </ul>
+        </div>
+        <div class="back-to-home-container">
+            <a href="student_dashbord.php" class="back-to-home">Back to Home</a>
+        </div>
+    </div>
+
+    
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Endless Learning. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

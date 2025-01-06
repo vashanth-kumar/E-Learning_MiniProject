@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C Programming Course - Multi-Page Content</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f6f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            font-size: 18px;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .topic {
+            margin-bottom: 30px;
+        }
+
+        .topic h2 {
+            font-size: 24px;
+            color: #007bff;
+        }
+
+        .topic p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .example {
+            background-color: #eef;
+            border-left: 4px solid #007bff;
+            padding: 15px;
+            margin-top: 10px;
+            font-size: 14px;
+            overflow-x: auto;
+        }
+
+        .navigation-buttons {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .navigation-buttons button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            margin: 0 5px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .navigation-buttons button:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #007bff;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        a {
+            color: #0056b3;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>C Programming Course</h1>
+        <p>Master the Foundations and Advanced Concepts of C Programming</p>
+    </header>
+    <div id="page1" class="page">
+        <h2>1. Introduction to C Programming</h2>
+        <p>
+            C is a general-purpose programming language that was created in the 1970s by Dennis Ritchie at Bell Laboratories. 
+            It has become one of the most popular programming languages in the world due to its efficiency, simplicity, and wide range of applications.
+        </p>
+    
+        <h3>Key Features of C:</h3>
+        <ul>
+            <li><strong>Procedural Language:</strong> Programs in C are structured as a collection of procedures, which are also called functions.</li>
+            <li><strong>Portability:</strong> C programs are platform-independent, meaning they can run on different systems with minimal changes.</li>
+            <li><strong>Rich Library:</strong> Includes built-in functions for a wide variety of tasks.</li>
+            <li><strong>Efficiency:</strong> Ideal for resource-constrained systems and high-performance applications.</li>
+        </ul>
+    
+        <h3>Applications of C:</h3>
+        <p>C is used in various domains, including:</p>
+        <ul>
+            <li>Operating Systems (e.g., Linux, Windows)</li>
+            <li>Embedded Systems (e.g., microcontrollers)</li>
+            <li>Game Development</li>
+            <li>Database Management Systems</li>
+            <li>Compilers and Interpreters</li>
+        </ul>
+    
+        <div class="example">
+            <h4>Example: Your First C Program</h4>
+            <pre>
+    #include <stdio.h>
+    int main() {
+        printf("Hello, World! Welcome to C Programming!");
+        return 0;
+    }
+            </pre>
+            <p>
+                When you run this program, it prints the text: <strong>Hello, World! Welcome to C Programming!</strong>
+            </p>
+        </div>
+    
+        <h3>C Syntax Overview:</h3>
+        <p>C follows a specific syntax for writing programs. It includes:</p>
+        <ul>
+            <li><strong>Statements:</strong> C programs are composed of statements that define the instructions.</li>
+            <li><strong>Variables:</strong> Variables are used to store data values.</li>
+            <li><strong>Operators:</strong> Used to perform operations on variables and values.</li>
+        </ul>
+    
+        <h3>Basic Structure of a C Program:</h3>
+        <pre>
+    #include <stdio.h>
+    
+    int main() {
+        // Code goes here
+        return 0;
+    }
+        </pre>
+        <p>This is a basic C program structure, where <code>#include <stdio.h></code> is a preprocessor directive, and <code>main()</code> is the entry point.</p>
+        
+        <h3>Comments in C:</h3>
+        <p>Comments are used for documentation purposes and are ignored by the compiler. There are two types:</p>
+        <ul>
+            <li><strong>Single-line comments:</strong> Begin with <code>//</code></li>
+            <li><strong>Multi-line comments:</strong> Enclosed between <code>/*</code> and <code>*/</code></li>
+        </ul>
+    
+        <div class="example">
+            <h4>Example: Using Comments</h4>
+            <pre>
+    // This is a single-line comment
+    /* This is a 
+       multi-line comment */
+            </pre>
+        </div>
+    
+        <h3>Variables in C:</h3>
+        <p>Variables are used to store data. Each variable has a type, which defines the kind of data it can store (e.g., integers, floating point numbers, etc.).</p>
+        <ul>
+            <li><strong>Data Types:</strong> Common data types in C include <code>int</code>, <code>float</code>, <code>double</code>, and <code>char</code>.</li>
+            <li><strong>Declaring Variables:</strong> A variable must be declared with a specific type before use.</li>
+        </ul>
+    
+        <div class="example">
+            <h4>Example: Declaring and Using Variables</h4>
+            <pre>
+    #include <stdio.h>
+    
+    int main() {
+        int num = 10;
+        float price = 9.99;
+        char grade = 'A';
+        printf("Number: %d, Price: %.2f, Grade: %c", num, price, grade);
+        return 0;
+    }
+            </pre>
+        </div>
+    </div>
+    <div id="page2" class="page" style="display: none;">
+        <h2>2. Control Flow and Functions</h2>
+    
+        <h3>Control Flow Statements:</h3>
+        <p>C provides several control flow statements to enable decision-making and repetition:</p>
+        <ul>
+            <li><strong>If-Else:</strong> Executes a block of code based on a condition. This is used to test a condition and run specific code.</li>
+            <li><strong>Switch:</strong> Useful for handling multiple conditions based on a variable's value. Switch allows you to test a value against multiple possible cases.</li>
+            <li><strong>For Loops:</strong> Used to repeat a block of code a specific number of times, based on a condition.</li>
+            <li><strong>While Loops:</strong> Used to repeat a block of code as long as a condition is true. It’s useful when you don’t know in advance how many times you need to repeat the code.</li>
+        </ul>
+    
+        <h3>If-Else Statement:</h3>
+        <p>The <code>if</code> statement is used to test a condition and execute a block of code if the condition is true. The <code>else</code> block executes if the condition is false.</p>
+    
+        <div class="example">
+            <h4>Example: If-Else</h4>
+            <pre>
+    int age = 20;
+    if (age >= 18) {
+        printf("You are eligible to vote.");
+    } else {
+        printf("You are not eligible to vote.");
+    }
+            </pre>
+        </div>
+    
+        <h3>Switch Statement:</h3>
+        <p>The <code>switch</code> statement is used to handle multiple conditions based on the value of a variable. It tests the variable against a series of <code>case</code> values and executes the corresponding block of code.</p>
+    
+        <div class="example">
+            <h4>Example: Switch</h4>
+            <pre>
+    int choice = 2;
+    switch (choice) {
+        case 1:
+            printf("Option 1 selected.");
+            break;
+        case 2:
+            printf("Option 2 selected.");
+            break;
+        default:
+            printf("Invalid choice.");
+    }
+            </pre>
+        </div>
+    
+        <h3>For Loop:</h3>
+        <p>The <code>for</code> loop is used when you know the number of iterations you need. It consists of three parts: initialization, condition, and increment/decrement.</p>
+    
+        <div class="example">
+            <h4>Example: For Loop</h4>
+            <pre>
+    for (int i = 1; i <= 5; i++) {
+        printf("Count: %d\n", i);
+    }
+            </pre>
+        </div>
+    
+        <h3>While Loop:</h3>
+        <p>The <code>while</code> loop repeats a block of code as long as the condition is true. It is useful for situations where the number of iterations is not known beforehand.</p>
+    
+        <div class="example">
+            <h4>Example: While Loop</h4>
+            <pre>
+    int i = 1;
+    while (i <= 5) {
+        printf("Count: %d\n", i);
+        i++;
+    }
+            </pre>
+        </div>
+    
+        <h3>Functions:</h3>
+        <p>Functions in C allow code reusability and modular programming. Functions can return values or be void (return nothing). They allow you to break down a complex task into smaller, manageable parts.</p>
+    
+        <h4>Function Syntax:</h4>
+        <pre>
+    return_type function_name(parameters) {
+        // Function body
+        return value;
+    }
+        </pre>
+    
+        <h4>Example: Function to Add Two Numbers</h4>
+        <div class="example">
+            <pre>
+    #include <stdio.h>
+    
+    int add(int a, int b) {
+        return a + b;
+    }
+    
+    int main() {
+        int result = add(5, 7);
+        printf("The sum is: %d", result);
+        return 0;
+    }
+            </pre>
+        </div>
+    
+        <h3>Function Arguments:</h3>
+        <p>Functions in C can accept arguments (or parameters). Arguments can be passed by value or by reference.</p>
+    
+        <h4>Passing by Value:</h4>
+        <p>In pass-by-value, the function gets a copy of the argument's value, and any modifications to the argument inside the function don’t affect the original variable.</p>
+    
+        <div class="example">
+            <h4>Example: Passing by Value</h4>
+            <pre>
+    void changeValue(int x) {
+        x = 10;
+    }
+    
+    int main() {
+        int num = 5;
+        changeValue(num);
+        printf("Number: %d", num); // Output: 5
+        return 0;
+    }
+            </pre>
+        </div>
+    
+        <h4>Passing by Reference:</h4>
+        <p>In pass-by-reference, the function gets the address of the argument, and changes made to the parameter affect the original variable.</p>
+    
+        <div class="example">
+            <h4>Example: Passing by Reference</h4>
+            <pre>
+    void changeValue(int *x) {
+        *x = 10;
+    }
+    
+    int main() {
+        int num = 5;
+        changeValue(&num);
+        printf("Number: %d", num); // Output: 10
+        return 0;
+    }
+            </pre>
+        </div>
+    
+        <h3>Recursion:</h3>
+        <p>Recursion occurs when a function calls itself to solve smaller instances of the same problem. It is commonly used in algorithms like factorial calculation, Fibonacci series, etc.</p>
+    
+        <h4>Example: Factorial Function Using Recursion</h4>
+        <div class="example">
+            <pre>
+    #include <stdio.h>
+    
+    int factorial(int n) {
+        if (n == 0) {
+            return 1;
+        } else {
+            return n * factorial(n - 1);
+        }
+    }
+    
+    int main() {
+        int result = factorial(5);
+        printf("Factorial: %d", result); // Output: 120
+        return 0;
+    }
+            </pre>
+        </div>
+    
+        <h3>Recursion Example - Fibonacci Series:</h3>
+        <p>Another example of recursion is calculating the Fibonacci series, where each number is the sum of the two preceding ones.</p>
+    
+        <div class="example">
+            <h4>Example: Fibonacci Series Using Recursion</h4>
+            <pre>
+    #include <stdio.h>
+    
+    int fibonacci(int n) {
+        if (n <= 1) {
+            return n;
+        } else {
+            return fibonacci(n - 1) + fibonacci(n - 2);
+        }
+    }
+    
+    int main() {
+        for (int i = 0; i < 10; i++) {
+            printf("%d ", fibonacci(i));
+        }
+        return 0;
+    }
+            </pre>
+        </div>
+    </div>
+    <div id="page3" class="page" style="display: none;">
+        <h2>3. Memory Management and Advanced Topics</h2>
+    
+        <h3>Pointers:</h3>
+        <p>Pointers are variables that store the memory address of another variable. They are used extensively in C for dynamic memory allocation and working with complex data structures like linked lists, trees, and graphs.</p>
+    
+        <div class="example">
+            <h4>Example: Basic Pointer Usage</h4>
+            <pre>
+    #include <stdio.h>
+    
+    int main() {
+        int num = 10;
+        int *ptr = &num;
+        printf("Value: %d, Address: %p", *ptr, ptr);
+        return 0;
+    }
+            </pre>
+            <p>In this example, the pointer <code>ptr</code> stores the address of <code>num</code>, and <code>*ptr</code> dereferences it to access the value.</p>
+        </div>
+    
+        <h3>Dynamic Memory Allocation:</h3>
+        <p>The <code>malloc</code>, <code>calloc</code>, and <code>free</code> functions are used for allocating and deallocating memory at runtime. They allow you to allocate memory dynamically, without knowing the exact size at compile time.</p>
+    
+        <h4>malloc</h4>
+        <p><code>malloc(size)</code> allocates a block of memory of the specified size in bytes and returns a pointer to the first byte.</p>
+    
+        <h4>calloc</h4>
+        <p><code>calloc(count, size)</code> allocates memory for an array of <code>count</code> elements, each of the specified size, and initializes all bytes to zero.</p>
+    
+        <h4>free</h4>
+        <p><code>free(ptr)</code> deallocates the memory block pointed to by <code>ptr</code>, releasing it back to the system for reuse.</p>
+    
+        <div class="example">
+            <h4>Example: Using malloc</h4>
+            <pre>
+    #include <stdio.h>
+    #include <stdlib.h>
+    
+    int main() {
+        int *ptr = (int*) malloc(5 * sizeof(int));
+        for (int i = 0; i < 5; i++) {
+            ptr[i] = i + 1;
+            printf("%d ", ptr[i]);
+        }
+        free(ptr);
+        return 0;
+    }
+            </pre>
+        </div>
+    
+        <h3>Memory Leaks:</h3>
+        <p>A memory leak occurs when dynamically allocated memory is not properly deallocated using <code>free()</code>, resulting in a loss of memory over time. This can lead to performance issues or even application crashes.</p>
+    
+        <h4>Preventing Memory Leaks:</h4>
+        <ul>
+            <li>Always free dynamically allocated memory once you’re done with it.</li>
+            <li>Set pointers to <code>NULL</code> after freeing memory.</li>
+        </ul>
+    
+        <div class="example">
+            <h4>Example: Freeing Memory</h4>
+            <pre>
+    #include <stdio.h>
+    #include <stdlib.h>
+    
+    int main() {
+        int *ptr = (int*) malloc(5 * sizeof(int));
+        if (ptr == NULL) {
+            printf("Memory allocation failed\n");
+            return 1;
+        }
+        for (int i = 0; i < 5; i++) {
+            ptr[i] = i + 1;
+            printf("%d ", ptr[i]);
+        }
+        free(ptr); // Release the memory
+        ptr = NULL; // Prevent dangling pointer
+        return 0;
+    }
+            </pre>
+        </div>
+    
+        <h3>Arrays and Pointers:</h3>
+        <p>In C, arrays and pointers are closely related. The name of an array is a pointer to its first element, and you can use pointer arithmetic to manipulate arrays.</p>
+    
+        <div class="example">
+            <h4>Example: Accessing Array Using Pointers</h4>
+            <pre>
+    #include <stdio.h>
+    
+    int main() {
+        int arr[] = {1, 2, 3, 4, 5};
+        int *ptr = arr; // Points to the first element of arr
+    
+        for (int i = 0; i < 5; i++) {
+            printf("%d ", *(ptr + i)); // Pointer arithmetic
+        }
+        return 0;
+    }
+            </pre>
+        </div>
+    
+        <h3>Memory Optimization:</h3>
+        <p>Memory optimization refers to the efficient use of memory in a program, reducing the memory footprint, and managing memory usage to improve performance. C allows you to optimize memory usage with techniques like memory pools, data structure optimization, and caching.</p>
+    
+        <h4>Memory Pooling:</h4>
+        <p>Memory pooling is the practice of pre-allocating memory blocks and reusing them rather than allocating and freeing memory repeatedly, which can be costly. A memory pool helps reduce memory fragmentation.</p>
+    
+        <div class="example">
+            <h4>Example: Memory Pooling</h4>
+            <pre>
+    #include <stdio.h>
+    #include <stdlib.h>
+    
+    #define POOL_SIZE 10
+    int pool[POOL_SIZE];
+    
+    int* allocate_from_pool() {
+        static int current = 0;
+        if (current < POOL_SIZE) {
+            return &pool[current++];
+        } else {
+            return NULL;
+        }
+    }
+    
+    int main() {
+        int *ptr1 = allocate_from_pool();
+        int *ptr2 = allocate_from_pool();
+        if (ptr1) *ptr1 = 100;
+        if (ptr2) *ptr2 = 200;
+    
+        printf("First: %d, Second: %d\n", *ptr1, *ptr2);
+        return 0;
+    }
+            </pre>
+        </div>
+    
+        <h3>Pointers and Structures:</h3>
+        <p>Structures are used to group variables of different types together. When used with pointers, they provide a way to efficiently manage complex data.</p>
+    
+        <div class="example">
+            <h4>Example: Using Pointers with Structures</h4>
+            <pre>
+    #include <stdio.h>
+    
+    struct Student {
+        char name[50];
+        int age;
+    };
+    
+    int main() {
+        struct Student s1 = {"John", 20};
+        struct Student *ptr = &s1;
+    
+        printf("Name: %s, Age: %d\n", ptr->name, ptr->age);
+        return 0;
+    }
+            </pre>
+        </div>
+    
+        <h3>Advanced Topics - Multi-threading:</h3>
+        <p>Multi-threading allows a program to execute multiple threads concurrently, leading to better performance, especially in CPU-bound tasks. C provides libraries like <code>pthread</code> to implement multi-threading.</p>
+    
+        <div class="example">
+            <h4>Example: Multi-threading with pthread</h4>
+            <pre>
+    #include <stdio.h>
+    #include <pthread.h>
+    
+    void* print_message(void* ptr) {
+        printf("Hello from thread!\n");
+        return NULL;
+    }
+    
+    int main() {
+        pthread_t thread1;
+        pthread_create(&thread1, NULL, print_message, NULL);
+        pthread_join(thread1, NULL);
+        return 0;
+    }
+            </pre>
+        </div>
+    
+        <h3>File I/O Operations in C:</h3>
+        <p>File handling in C allows programs to read from and write to files. C provides functions like <code>fopen()</code>, <code>fclose()</code>, <code>fscanf()</code>, and <code>fprintf()</code> for file operations.</p>
+    
+        <h4>Opening and Closing Files:</h4>
+        <p>Use <code>fopen()</code> to open a file for reading, writing, or appending, and use <code>fclose()</code> to close the file after performing operations.</p>
+    
+        <div class="example">
+            <h4>Example: File Operations</h4>
+            <pre>
+    #include <stdio.h>
+    
+    int main() {
+        FILE *file = fopen("example.txt", "w");
+        if (file == NULL) {
+            printf("Unable to open file.\n");
+            return 1;
+        }
+        fprintf(file, "Hello, World!");
+        fclose(file);
+        return 0;
+    }
+            </pre>
+        </div>
+    
+        <h3>Advanced Data Structures - Linked Lists:</h3>
+        <p>Linked lists are dynamic data structures consisting of nodes. Each node contains data and a reference (or pointer) to the next node. Linked lists allow efficient insertion and deletion of elements.</p>
+    
+        <div class="example">
+            <h4>Example: Singly Linked List</h4>
+            <pre>
+    #include <stdio.h>
+    #include <stdlib.h>
+    
+    struct Node {
+        int data;
+        struct Node* next;
+    };
+    
+    int main() {
+        struct Node* head = malloc(sizeof(struct Node));
+        head->data = 1;
+        head->next = malloc(sizeof(struct Node));
+        head->next->data = 2;
+        head->next->next = NULL;
+    
+        printf("First node: %d\n", head->data);
+        printf("Second node: %d\n", head->next->data);
+    
+        free(head->next);
+        free(head);
+        return 0;
+    }
+            </pre>
+        </div>
+    
+        <h3>File Handling - Reading from Files:</h3>
+        <p>Reading from files in C involves opening a file in read mode, using functions like <code>fgetc()</code>, <code>fscanf()</code>, and <code>fgets()</code> to retrieve data, and then closing the file.</p>
+    
+        <div class="example">
+            <h4>Example: Reading from a File</h4>
+            <pre>
+    #include <stdio.h>
+    
+    int main() {
+        FILE *file = fopen("example.txt", "r");
+        if (file == NULL) {
+            printf("Unable to open file.\n");
+            return 1;
+        }
+        char ch;
+        while ((ch = fgetc(file)) != EOF) {
+            printf("%c", ch);
+        }
+        fclose(file);
+        return 0;
+    }
+            </pre>
+        </div>
+    </div>
+    <div id="page4" class="page" style="display: none;">
+        <h2>4. Practice Projects and Resources</h2>
+    
+        <h3>Practice Projects:</h3>
+        <p>Here are some practical projects to build your skills in C programming:</p>
+        <ul>
+            <li><strong>Library Management System:</strong> Develop a program that can add, delete, and search books in a library system.</li>
+            <li><strong>Currency Converter:</strong> Create a program to convert one currency into another using a fixed conversion rate.</li>
+            <li><strong>Banking System:</strong> Build a program to simulate a banking system where users can check balance, withdraw, and deposit money.</li>
+            <li><strong>Student Database:</strong> Create a student database to store and manage student records like name, age, and marks.</li>
+            <li><strong>Tic-Tac-Toe Game:</strong> Develop a simple text-based Tic-Tac-Toe game for two players.</li>
+            <li><strong>Simple Calculator:</strong> Build a program to perform basic arithmetic operations like addition, subtraction, multiplication, and division.</li>
+            <li><strong>Online Quiz System:</strong> Design a program where users can take a quiz with multiple questions and receive scores at the end.</li>
+        </ul>
+    
+        <h3>Advanced Topics:</h3>
+        <p>If you want to go beyond the basics, consider diving into more advanced topics in C programming:</p>
+        <ul>
+            <li><strong>Multi-threading:</strong> Learn how to execute multiple threads concurrently for better performance.</li>
+            <li><strong>File I/O:</strong> Work with files in C to read from and write to files on disk.</li>
+            <li><strong>Socket Programming:</strong> Learn how to develop networked applications using sockets for client-server communication.</li>
+            <li><strong>Data Structures:</strong> Study complex data structures like linked lists, trees, stacks, and queues.</li>
+            <li><strong>Algorithms:</strong> Implement and optimize algorithms for tasks like searching, sorting, and pathfinding.</li>
+            <li><strong>Operating Systems Concepts:</strong> Learn the fundamentals of operating systems, such as memory management, process synchronization, and file systems.</li>
+            <li><strong>Cryptography:</strong> Explore cryptographic techniques for securing communications, including encryption and decryption algorithms.</li>
+        </ul>
+    
+        <h3>Resources for Further Learning:</h3>
+        <p>Here are some books, websites, and online platforms to help you learn more:</p>
+        <ul>
+            <li><strong>Books:</strong> "The C Programming Language" by Brian Kernighan and Dennis Ritchie, "C Programming Absolute Beginner's Guide" by Greg Perry</li>
+            <li><strong>Websites:</strong> TutorialsPoint, GeeksforGeeks, Stack Overflow, Cprogramming.com</li>
+            <li><strong>Online Compilers:</strong> CodeChef, Repl.it, OnlineGDB</li>
+            <li><strong>Courses:</strong> Udemy, Coursera, edX (Look for C programming courses)</li>
+        </ul>
+    
+        <h3>Practice on C Online Compilers:</h3>
+        <p>Use online compilers to practice C programming without installing any software:</p>
+        <ul>
+            <li><strong>OnlineGDB:</strong> A powerful online compiler for C with debugging support.</li>
+            <li><strong>Repl.it:</strong> An easy-to-use online IDE for C and many other languages.</li>
+            <li><strong>LeetCode:</strong> Improve your coding skills by solving algorithm problems in C.</li>
+            <li><strong>CodeForces:</strong> Practice competitive programming and participate in coding challenges.</li>
+            <li><strong>HackerRank:</strong> A platform with coding challenges and tutorials in C and other languages.</li>
+        </ul>
+    
+        <h3>Contribute to Open Source Projects:</h3>
+        <p>Contributing to open source projects is a great way to improve your skills, learn from experienced developers, and give back to the community. Look for C projects on GitHub that you can contribute to.</p>
+    
+        <h3>Online Communities:</h3>
+        <p>Join programming communities to discuss problems, share solutions, and learn from others. Some popular online communities include:</p>
+        <ul>
+            <li><strong>Stack Overflow:</strong> A Q&A platform for programmers where you can ask and answer questions.</li>
+            <li><strong>Reddit (r/C_Programming):</strong> A subreddit dedicated to C programming discussions and resources.</li>
+            <li><strong>GitHub:</strong> Explore repositories and contribute to open-source projects.</li>
+            <li><strong>Cprogramming.com Forums:</strong> A dedicated forum for C programming discussions.</li>
+        </ul>
+    
+        <h3>Advanced Practice Ideas:</h3>
+        <ul>
+            <li><strong>Operating System Simulator:</strong> Build a program to simulate basic OS functions like process scheduling and memory management.</li>
+            <li><strong>File Compression Tool:</strong> Implement an algorithm for compressing and decompressing files using techniques like Huffman coding.</li>
+            <li><strong>Mini Compiler:</strong> Design a simple compiler that converts a high-level language to machine code.</li>
+        </ul>
+    
+        <h3>Mastering C Programming:</h3>
+        <p>Becoming proficient in C requires consistent practice and learning. Work on small projects regularly, contribute to open-source, and always challenge yourself with more complex problems. Whether you're interested in systems programming, game development, or embedded systems, mastering C will provide a strong foundation for your future career in programming.</p>
+    </div>
+    
+                
+
+        <!-- Navigation Buttons -->
+        <div class="navigation-buttons">
+            <button id="prevBtn" onclick="navigate(-1)" style="display: none;">Previous</button>
+            <button id="nextBtn" onclick="navigate(1)">Next</button>
+            <button id="homeBtn" onclick="navigateToHome()" style="display: none;">Home</button>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Endless Learning. All rights reserved.</p>
+    </footer>
+
+    <script>
+        let currentPage = 1;
+        const totalPages = 4;
+
+        function navigate(direction) {
+            document.getElementById(`page${currentPage}`).style.display = 'none';
+            currentPage += direction;
+
+            // Show the current page
+            document.getElementById(`page${currentPage}`).style.display = 'block';
+
+            // Update button visibility
+            document.getElementById('prevBtn').style.display = currentPage === 1 ? 'none' : 'inline-block';
+            document.getElementById('nextBtn').style.display = currentPage === totalPages ? 'none' : 'inline-block';
+            document.getElementById('homeBtn').style.display = currentPage === totalPages ? 'inline-block' : 'none';
+        }
+
+        function navigateToHome() {
+            document.getElementById(`page${currentPage}`).style.display = 'none';
+            currentPage = 1;
+            document.getElementById(`page${currentPage}`).style.display = 'block';
+            document.getElementById('prevBtn').style.display = 'none';
+            document.getElementById('nextBtn').style.display = 'inline-block';
+            document.getElementById('homeBtn').style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

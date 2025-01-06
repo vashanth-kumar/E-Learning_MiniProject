@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Profile</title>
+    <link rel="stylesheet" href="teacher_profile_style.css">
+</head>
+<body>
+    <header>
+        <h1>Teacher Profile</h1>
+        <nav>
+            <ul>
+                <li><a href="dashboard.php">Dashboard</a></li>
+                <li><a href="courses.php">Courses</a></li>
+                <li><a href="logout.php" class="logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Profile Card -->
+        <section class="profile-card">
+            <div class="profile-info">
+                <img src="profile_picture.jpg" alt="Profile Picture" class="profile-picture">
+                <h2>[Teacher Name]</h2>
+                <p class="bio">Experienced teacher in various subjects, passionate about enhancing student knowledge and success.</p>
+            </div>
+
+            <!-- Profile Details -->
+            <div class="profile-details">
+                <h3>Subjects Taught</h3>
+                <ul class="subject-list">
+                    <li>Mathematics</li>
+                    <li>Science</li>
+                    <li>Web Development</li>
+                    <li>Artificial Intelligence</li>
+                </ul>
+
+                <h3>Contact Information</h3>
+                <p>Email: teacher@example.com</p>
+                <p>Phone: +123 456 7890</p>
+
+                <!-- Action Buttons -->
+                <div class="button-group">
+                    <button onclick="window.location.href='edit_profile.php'">Edit Profile</button>
+                    <button onclick="window.location.href='change_password.php'">Change Password</button>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

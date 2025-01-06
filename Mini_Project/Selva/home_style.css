@@ -1,0 +1,149 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #007bff;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.logout {
+    color: #ff5c5c;
+}
+
+/* Hero Section */
+.hero-dashboard { 
+    text-align: center;
+    background-color: #007bff;
+    color: white;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.hero-dashboard h2 {
+    font-size: 2em;
+}
+
+.hero-dashboard p {
+    font-size: 1.1em;
+}
+
+/* Announcements Section */
+.dashboard-announcements {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-announcements h3 {
+    color: #007bff;
+    font-size: 1.5em;
+}
+
+.dashboard-announcements ul {
+    padding: 0;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* Dashboard Functions Section */
+.dashboard-functions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.dashboard-card {
+    background-color: white;
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+}
+
+.dashboard-card h4 {
+    color: #007bff;
+    font-size: 1.4em;
+}
+
+.dashboard-card p {
+    font-size: 0.9em;
+    color: #555;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Teaching Tips Section */
+.teaching-tips {
+    background-color: white;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.teaching-tips h3 {
+    color: #007bff;
+    font-size: 1.5em;
+}
+
+.teaching-tips ul {
+    padding: 0;
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.teaching-tips ul li {
+    font-size: 1em;
+    color: #555;
+}
